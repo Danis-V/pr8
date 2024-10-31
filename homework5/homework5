@@ -1,0 +1,21 @@
+def sum_n():
+    numbers = []
+    
+    while True:
+        u_in = input("Введите число. Для завершения введите 'stop' или 'end': ")
+        
+        if u_in.lower() in ['stop', 'end']:
+            break
+        
+        try:
+            number = float(u_in)
+            numbers.append(number)
+        except ValueError:
+            print("Ошибка! Пожалуйста, введите корректное число. Для завершения введите 'stop' или 'end'.")
+    
+    if numbers:
+        t_sum = sum(numbers)
+        print(f"Сумма всех введенных чисел: {t_sum}")
+    else:
+        print("Ни одного числа не было введено.")
+sum_n()
