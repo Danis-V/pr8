@@ -1,0 +1,14 @@
+def square():
+    size = 10
+    # Цикл для перебора строк
+    for i in range(size):
+        # Цикл для перебора символов в строке
+        for k in range(size):
+            # Проверка на нахождение вне квадрата
+            if i > 0 and i < size - 1 and k > 0 and k < size - 1:
+                print(" ", end=" ")
+            else:
+                print("*", end=" ")
+        # Переход на новую строку
+        print()
+square()
