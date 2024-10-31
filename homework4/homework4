@@ -1,0 +1,15 @@
+while True:
+    try:
+        a = int(input("Введите первое целое число: "))
+        b = int(input("Введите второе целое число: "))
+        
+        if a > b:
+            a, b = b, a
+        
+        print(f"Все целые числа между {a} и {b}:")
+        for num in range(a + 1, b):
+            print(num)
+        
+        break
+    except ValueError:
+        print("Ошибка! Пожалуйста, введите корректные целые числа.")
